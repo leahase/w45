@@ -10,22 +10,22 @@
 // This property should contain the name of the account holder 
 
 const account = {
-    accountName:"", // // accountName, should be the data type string 
+    accountName:"Lea", // // accountName, should be the data type string 
     balance:1000, // - balance, should be the data type number 
     // this property should contain the total amount of the account 
-    function getBalance(){
+    getBalance(){
         console.log(`show balance: $${this.balance}`); //  - getBalance, should be a function this function should display the total amount of the account to the user 
-    }
-    function deposit(){
+    },
+    deposit (){
         //  this function should be able to deposit money onto the balance of the account         
-    }
-    function withdrawal(){
+    },
+    withdrawal(){
         //  this function should be able do withdrawal money from the balance of the account 
-    }
-    function getAccountName (){
+    },
+    getAccountName (){
         //  this function should dispaly the account holders name to the user 
 
-    }
+    },
     accountError(){
 
 //  - accountError, same as above function! 
@@ -33,7 +33,7 @@ const account = {
 //  this one is a bit tricky... it's up to you to figure out how or what you should use this for. 
 
 //  HINT: it's more a thinking poblem than a technical problem :) 
-    }
+    },
 
 
 }
