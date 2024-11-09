@@ -17,7 +17,6 @@ const account = {
         console.log(`show balance: $${this.balance}`); //  - getBalance, should be a function this function should display the total amount of the account to the user 
     }
     function deposit(){
-        
         //  this function should be able to deposit money onto the balance of the account         
     }
     function withdrawal(){
@@ -25,6 +24,7 @@ const account = {
     }
     function getAccountName (){
         //  this function should dispaly the account holders name to the user 
+
     }
     accountError(){
 
@@ -35,8 +35,9 @@ const account = {
 //  HINT: it's more a thinking poblem than a technical problem :) 
     }
 
-    
+
 }
+account.getAccountName();
 
  
 
