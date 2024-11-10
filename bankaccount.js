@@ -27,11 +27,13 @@ const account = {
     },
         //  this function should be able to deposit money onto the balance of the account         
     withdrawal(amount){
-        if (amount > 0) {
+        if (amount > 0 && amount <= this.balance) { //amount är större än 0 och amount kan dras utifrån nuvarande balance
         this.balance +- amount; //balance - amount som tas
         console.log (`u withdrew $${amount} new balance: $${this.balance}.`);
-        } else {
+        } else if (amount <=0){ //amount mindre eller 0
         console.log("Too low, withdraw more than 0.");
+        } else {
+            console.log(`you passed ur limit`);
         }
         //  this function should be able do withdrawal money from the balance of the account 
     },
