@@ -6,15 +6,15 @@ const account = {
     accountHolder:"Lea", 
 
     getBalance(){
-        console.log(`show balance: $${this.balance}`); 
+        return(`show balance: $${this.balance}`); 
     },
     deposit (amount){
         amount = Number(amount);
         if (amount > 0) {
         this.balance += amount;  //amount + balance
-        console.log(`U deposited $${amount}. New balance: $${this.balance}.`);
+        return(`U deposited $${amount}. New balance: $${this.balance}.`);
         } else {
-        console.log("Too low, add more than 0.");
+        return("Too low, add more than 0.");
         }
     },
 
@@ -22,19 +22,19 @@ const account = {
         amount = Number(amount); //att det blir en number och inte string
         if (amount > 0 && amount <= this.balance) { //amount är större än 0 och amount kan dras utifrån nuvarande balance
         this.balance -= amount; //balance - amount som tas
-        console.log (`u withdrew $${amount} new balance: $${this.balance}.`);
+        return(`u withdrew $${amount} new balance: $${this.balance}.`);
         } else if (amount <= 0){ //amount mindre eller 0
-            console.log("Too low, withdraw more than 0.");
+            return("Too low, withdraw more than 0.");
         } else {
-            console.log(`you passed ur limit`);
+            return(`you passed ur limit`);
         }
 
     },
     getAccountName (){
-        console.log(`account holder${this.accountHolder}`);
+        return(`account holder${this.accountHolder}`);
     },
     accountError(errorMessage){
-        console.log(`Account error: ${errorMessage}`);
+        return(`Account error: ${errorMessage}`);
     },
 };
 
