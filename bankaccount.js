@@ -9,6 +9,7 @@ const account = {
         console.log(`show balance: $${this.balance}`); 
     },
     deposit (amount){
+        amount = Number(amount);
         if (amount > 0) {
         this.balance += amount;  //amount + balance
         console.log(`U deposited $${amount}. New balance: $${this.balance}.`);
@@ -35,26 +36,26 @@ const account = {
     accountError(errorMessage){
         console.log(`Account error: ${errorMessage}`);
     },
-
-
 };
+
 function atm (){
     while (true){
         const choice = prompt(`Choose a number between 1 and 4.\n Do you want to   \n 1 show balance, \n 2 make a deposit, \n 3 withdaw money, \n 4 get account name `);
 
         if (choice === '1'){
-            account.getBalance();
+            alert(`$account.getBalance()`);
         } else if (choice === '2'){
             const depositAmount = prompt('Enter amount to deposit');
             account.deposit(depositAmount);
-            alert(`New balance: ${depositAmount}`)
+            alert(`New balance: ${account.balance}`);
         } else if (choice === '3'){
             const withdrawAmount = prompt('enter amount u want to withdraw');
-            account.withdrawal(withdrawAmount);
+            const newBalance = account.withdrawal(withdrawAmount);
+            alert(`New balance: $${newBalance}`);
         } else if (choice === '4'){
-            account.getAccountName;
+            alert(`Account name : ${(account.getAccountName())}`);
         } else{
-            (`invalid answer. try again`);
+            alert(`invalid answer. try again`);
         }
     }
 }
