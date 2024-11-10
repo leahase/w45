@@ -26,7 +26,13 @@ const account = {
         }
     },
         //  this function should be able to deposit money onto the balance of the account         
-    withdrawal(){
+    withdrawal(amount){
+        if (amount > 0) {
+        this.balance +- amount; //balance - amount som tas
+        console.log (`u withdrew $${amount} new balance: $${this.balance}.`);
+        } else {
+        console.log("Too low, withdraw more than 0.");
+        }
         //  this function should be able do withdrawal money from the balance of the account 
     },
     getAccountName (){
@@ -44,7 +50,7 @@ const account = {
 
 
 }
-account.getAccountName();
+console.log(account.getAccountName());
 
  
 
