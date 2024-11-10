@@ -10,15 +10,22 @@
 // This property should contain the name of the account holder 
 
 const account = {
-    accountName:"Lea", // // accountName, should be the data type string 
-    balance:1000, // - balance, should be the data type number 
+    accountName:"card", // // accountName, should be the data type string 
+    balance: 1000,
+    accountHolder:"Lea", // - balance, should be the data type number 
     // this property should contain the total amount of the account 
     getBalance(){
         console.log(`show balance: $${this.balance}`); //  - getBalance, should be a function this function should display the total amount of the account to the user 
     },
-    deposit (){
-        //  this function should be able to deposit money onto the balance of the account         
+    deposit (amount){
+        if (amount > 0) {
+        this.balance += amount;  //amount + balance
+        console.log(`U deposited $${amount}. New balance: $${this.balance}.`);
+        } else {
+        console.log("Too low, add more than 0.");
+        }
     },
+        //  this function should be able to deposit money onto the balance of the account         
     withdrawal(){
         //  this function should be able do withdrawal money from the balance of the account 
     },
@@ -68,3 +75,6 @@ account.getAccountName();
 //  The atm() function should be responsible for showing the user interface 
 
 //  and based on the user input show the right meny choice 
+
+
+
