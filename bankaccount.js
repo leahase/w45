@@ -4,6 +4,7 @@ const account = {
     accountName:"Leas card", // string 
     balance: 1000,
     accountHolder:"Lea", 
+
     getBalance(){
         console.log(`show balance: $${this.balance}`); 
     },
@@ -18,20 +19,20 @@ const account = {
 
     withdrawal(amount){
         if (amount > 0 && amount <= this.balance) { //amount är större än 0 och amount kan dras utifrån nuvarande balance
-        this.balance +- amount; //balance - amount som tas
+        this.balance -= amount; //balance - amount som tas
         console.log (`u withdrew $${amount} new balance: $${this.balance}.`);
-        } else if (amount <=0){ //amount mindre eller 0
-        console.log("Too low, withdraw more than 0.");
+        } else if (amount <= 0){ //amount mindre eller 0
+            console.log("Too low, withdraw more than 0.");
         } else {
             console.log(`you passed ur limit`);
         }
 
     },
     getAccountName (){
-        console.log(`account holder${this.accountName}`);
-
+        console.log(`account holder${this.accountHolder}`);
     },
-    accountError(){
+    accountError(errorMessage){
+        console.log(`Account error: ${errorMessage}`);
 
 //  - accountError, same as above function! 
 
@@ -47,16 +48,16 @@ function atm (){
         const choice = prompt(`Choose a number between 1 and 4.\n Do you want to   \n 1 show balance, \n 2 make a deposit, \n 3 withdaw money, \n 4 get account name `);
 
         if (choice === '1'){
-            account.getBalance();
+            console.log(account.getBalance());
         } else if (choice === '2'){
             const depositAmount = prompt('Enter amount to deposit');
             account.deposit(depositAmount);
-            alert(`New balance:`)
+            alert(`New balance: ${depositAmount}`)
         } else if (choice === '3'){
             const withdrawAmount = prompt('enter amount u want to withdraw')
             account.withdrawal(withdrawAmount);
         } else if (choice === '4'){
-            account.accountName
+            account.accountName;
         } else{
             (`invalid answer. try again`)
         }
