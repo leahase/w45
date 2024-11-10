@@ -43,7 +43,7 @@ function atm (){
         const choice = prompt(`Choose a number between 1 and 4.\n Do you want to   \n 1 show balance, \n 2 make a deposit, \n 3 withdaw money, \n 4 get account name `);
 
         if (choice === '1'){
-            alert(`$account.getBalance()`);
+            alert(`${(account.getBalance())}`);
         } else if (choice === '2'){
             const depositAmount = prompt('Enter amount to deposit');
             account.deposit(depositAmount);
