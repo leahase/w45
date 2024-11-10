@@ -1,21 +1,11 @@
 // BANK ACCOUNT 
 
-
-
-// REQUIREMENTS 
-
-// Create an object called account that has the following properties: 
-
-
-// This property should contain the name of the account holder 
-
 const account = {
-    accountName:"card", // // accountName, should be the data type string 
+    accountName:"Leas card", // string 
     balance: 1000,
-    accountHolder:"Lea", // - balance, should be the data type number 
-    // this property should contain the total amount of the account 
+    accountHolder:"Lea", 
     getBalance(){
-        console.log(`show balance: $${this.balance}`); //  - getBalance, should be a function this function should display the total amount of the account to the user 
+        console.log(`show balance: $${this.balance}`); 
     },
     deposit (amount){
         if (amount > 0) {
@@ -25,7 +15,7 @@ const account = {
         console.log("Too low, add more than 0.");
         }
     },
-        //  this function should be able to deposit money onto the balance of the account         
+
     withdrawal(amount){
         if (amount > 0 && amount <= this.balance) { //amount är större än 0 och amount kan dras utifrån nuvarande balance
         this.balance +- amount; //balance - amount som tas
@@ -35,10 +25,10 @@ const account = {
         } else {
             console.log(`you passed ur limit`);
         }
-        //  this function should be able do withdrawal money from the balance of the account 
+
     },
     getAccountName (){
-        //  this function should dispaly the account holders name to the user 
+        console.log(`account holder${this.accountName}`);
 
     },
     accountError(){
@@ -51,10 +41,8 @@ const account = {
     },
 
 
-}
-console.log(account.getAccountName());
+};
 
- 
 
 // EXTRA: exitAccount, should be a function 
 
