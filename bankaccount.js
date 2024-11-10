@@ -42,29 +42,26 @@ const account = {
 
 
 };
+function atm (){
+    while (true){
+        const choice = prompt(`Choose a number between 1 and 4.\n Do you want to   \n 1 show balance, \n 2 make a deposit, \n 3 withdaw money, \n 4 get account name `);
+
+        if (choice = 1){
+            account.getBalance
+        } else if (choice = 2){
+            account.deposit
+        } else if (choice = 3){
+            account.withdrawal
+        } else if (choice = 4){
+            account.accountName
+        } else{
+            (`invalid answer. try again`)
+        }
+    }
+}
+// To start the ATM, call the atm function
 
 
-// EXTRA: exitAccount, should be a function 
-
-//  this function should exit the account 
-
-//  HINT: there are a few different ways to do this, it's up to you which way you choose. 
-
- 
-
-//  EXTRA = OPTIONAL NOT MANDATORY 
-
- 
-
-//  Remember that a function is just a value. And if a function is just a 
-
-//  value then we can both pass it as a parameter to a function and 
-
-//  pass it as a property of an object. 
-
- 
-
-//  The object should handle all of the functionality (logic) 
 
  
 
@@ -72,5 +69,5 @@ const account = {
 
 //  and based on the user input show the right meny choice 
 
-
+atm ();
 
